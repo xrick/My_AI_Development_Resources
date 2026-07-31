@@ -1,0 +1,20 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "openai/gpt-oss-20b",
+  "provider": {
+    "vllm": {
+      "name": "vLLM MLX",
+      "package": "@ai-sdk/openai-compatible",
+      "options": {
+        "baseURL": "http://localhost:8172/v1",
+        "apiKey": "empty"
+      },
+      "models": {
+        "openai/gpt-oss-20b": {
+          "name": "gpt-oss-20b",
+          "modelID": "openai/gpt-oss-20b"
+        }
+      }
+    }
+  }
+}

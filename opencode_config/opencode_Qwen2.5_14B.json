@@ -1,0 +1,20 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "mlx-community/Qwen2.5-Coder-14B-Instruct-4bit",
+  "provider": {
+    "vllm": {
+      "name": "vLLM MLX",
+      "package": "@ai-sdk/openai-compatible",
+      "options": {
+        "baseURL": "http://10.0.1.53:8173/v1",
+        "apiKey": "empty"
+      },
+      "models": {
+        "mlx-community/Qwen2.5-Coder-14B-Instruct-4bit": {
+          "name": "Qwen2.5-Coder-14B-Instruct-4bit",
+          "modelID": "mlx-community/Qwen2.5-Coder-14B-Instruct-4bit"
+        }
+      }
+    }
+  }
+}
