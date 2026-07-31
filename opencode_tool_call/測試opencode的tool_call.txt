@@ -1,0 +1,19 @@
+curl http://localhost:8172/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "mlx-community/Qwen2.5-Coder-7B-Instruct-8bit",
+    "messages": [{"role": "user", "content": "讀取 /Users/rickliao/SubRepos/Projects/SAEPB/CLAUDE.md 並做摘要。"}],
+    "tools": [{
+      "type": "function",
+      "function": {
+        "name": "read",
+        "description": "Read a file from disk",
+        "parameters": {
+          "type": "object",
+          "properties": {"filePath": {"type": "string"}},
+          "required": ["filePath"]
+        }
+      }
+    }],
+    "tool_choice": "auto"
+  }'
